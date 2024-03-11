@@ -12,23 +12,22 @@ const categoriesPopular: string[] = [
   "Kurma Sukari",
   "Google Pixel",
   "Sony A6400",
-  "Dr Qyu Lembar",
-  "Traction Device",
+  "Dr Qyu Lembar Traction Device",
 ];
 
 export default function HeaderSearch() {
   return (
-    <>
+    <div className="bg-white">
       {/* Header Search Section */}
-      <div className="px-9 py-2 flex items-center gap-x-3">
+      <div className="px-9 py-2 flex items-center gap-x-3 fixed top-[35px] w-full">
         {/* Logo Section */}
-        <a href="#" className="cursor-pointer w-[200px]">
+        <a href="#" className="cursor-pointer w-[200px] pt-1">
           <img src={tokopediaImage} alt="tokopedia-logo" className="w-full" />
         </a>
 
         {/* Search Section */}
-        <div className="flex items-center gap-x-4 w-full px-4">
-          <div className="inline-block px-2 py-2 hover:bg-[#F0F3F7] rounded-lg transition duration-200">
+        <div className="flex items-center gap-x-4 w-full h-full px-4">
+          <div className="inline-block p-2 h-full hover:bg-[#F0F3F7] rounded-lg transition duration-200">
             <a href="#" className="text-sm text-[#212121]">
               Kategori
             </a>
@@ -70,7 +69,7 @@ export default function HeaderSearch() {
 
       {/* Popular Categories Section */}
       <div className="pr-9 pb-9 relative flex items-center justify-between">
-        <div className="fixed left-[300px] top-[95px] w-2/3">
+        <div className="fixed left-[300px] top-[90px] w-[45%]">
           <div className="flex items-center">
             {categoriesPopular.map((link, index) => (
               <a
@@ -83,7 +82,7 @@ export default function HeaderSearch() {
             ))}
           </div>
         </div>
-        <div className="fixed right-6 top-[95px] flex items-center gap-x-2">
+        <div className="fixed right-6 top-[95px] lg:flex items-center gap-x-2 hidden">
           <div className="w-5">
             <img src={locationIcon} className="w-full" />
           </div>
@@ -96,6 +95,6 @@ export default function HeaderSearch() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

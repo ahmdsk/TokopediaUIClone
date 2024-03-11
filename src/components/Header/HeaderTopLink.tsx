@@ -10,7 +10,7 @@ const headerLinks: string[] = [
 
 export default function HeaderTopLink() {
   return (
-    <div className="flex justify-between bg-[#f0f3f7] text-[#6D7588] items-center px-9 py-1">
+    <div className="flex justify-between bg-[#f0f3f7] text-[#6D7588] items-center px-9 py-1 fixed top-0 w-full">
       <div className="flex gap-x-2 items-center">
         <img src={phoneIcon} alt="phone" className="w-4" />
         <h1 className="font-medium text-[12px] hover:text-[#00aa5b] transition-all duration-200 cursor-pointer">Download Tokopedia App</h1>
